@@ -1,0 +1,68 @@
+PORT0:
+  _modify:
+    PCR1:
+      derivedFrom: PCR0
+    PCR2:
+      derivedFrom: PCR0
+    PCR3:
+      derivedFrom: PCR0
+    PCR4:
+      derivedFrom: PCR0
+    PCR5:
+      derivedFrom: PCR0
+    PCR6:
+      derivedFrom: PCR0
+    PCR7:
+      derivedFrom: PCR0
+    PCR8:
+      derivedFrom: PCR0
+    PCR9:
+      derivedFrom: PCR0
+    PCR10:
+      derivedFrom: PCR0
+    PCR11:
+      derivedFrom: PCR0
+    PCR12:
+      derivedFrom: PCR0
+    PCR13:
+      derivedFrom: PCR0
+    PCR14:
+      derivedFrom: PCR0
+    PCR15:
+      derivedFrom: PCR0
+    PCR16:
+      derivedFrom: PCR0
+    PCR17:
+      derivedFrom: PCR0
+    PCR18:
+      derivedFrom: PCR0
+    PCR19:
+      derivedFrom: PCR0
+    PCR20:
+      derivedFrom: PCR0
+    PCR21:
+      derivedFrom: PCR0
+    PCR22:
+      derivedFrom: PCR0
+    PCR23:
+      derivedFrom: PCR0
+    PCR24:
+      derivedFrom: PCR0
+    PCR25:
+      derivedFrom: PCR0
+    PCR26:
+      derivedFrom: PCR0
+    PCR27:
+      derivedFrom: PCR0
+    PCR28:
+      derivedFrom: PCR0
+    PCR29:
+      derivedFrom: PCR0
+    PCR30:
+      derivedFrom: PCR0
+    PCR31:
+      derivedFrom: PCR0
+
+_modify:
+  PORT[12345]:
+    derivedFrom: PORT0

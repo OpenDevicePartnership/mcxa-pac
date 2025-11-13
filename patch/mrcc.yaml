@@ -1,0 +1,14 @@
+MRCC0:
+  _modify:
+    MRCC_LPUART[12345]_CLKSEL:
+      derivedFrom: MRCC_LPUART0_CLKSEL
+    MRCC_LPUART[12345]_CLKDIV:
+      derivedFrom: MRCC_LPUART0_CLKDIV
+    MRCC_LPI2C[123]_CLKSEL:
+      derivedFrom: MRCC_LPI2C0_CLKSEL
+    MRCC_LPI2C[123]_CLKDIV:
+      derivedFrom: MRCC_LPI2C0_CLKDIV
+    MRCC_LPSPI[1]_CLKSEL:
+      derivedFrom: MRCC_LPSPI0_CLKSEL
+    MRCC_LPSPI[1]_CLKDIV:
+      derivedFrom: MRCC_LPSPI0_CLKDIV

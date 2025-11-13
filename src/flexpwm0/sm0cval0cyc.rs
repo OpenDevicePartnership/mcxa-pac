@@ -1,0 +1,28 @@
+#[doc = "Register `SM0CVAL0CYC` reader"]
+pub type R = crate::R<Sm0cval0cycSpec>;
+#[doc = "Field `CVAL0CYC` reader - Capture Value 0 Cycle"]
+pub type Cval0cycR = crate::FieldReader;
+impl R {
+    #[doc = "Bits 0:3 - Capture Value 0 Cycle"]
+    #[inline(always)]
+    pub fn cval0cyc(&self) -> Cval0cycR {
+        Cval0cycR::new((self.bits & 0x0f) as u8)
+    }
+}
+#[cfg(feature = "debug")]
+impl core::fmt::Debug for R {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("SM0CVAL0CYC")
+            .field("cval0cyc", &self.cval0cyc())
+            .finish()
+    }
+}
+#[doc = "Capture Value 0 Cycle Register\n\nYou can [`read`](crate::Reg::read) this register and get [`sm0cval0cyc::R`](R). See [API](https://docs.rs/svd2rust/#read--modify--write-api)."]
+pub struct Sm0cval0cycSpec;
+impl crate::RegisterSpec for Sm0cval0cycSpec {
+    type Ux = u16;
+}
+#[doc = "`read()` method returns [`sm0cval0cyc::R`](R) reader structure"]
+impl crate::Readable for Sm0cval0cycSpec {}
+#[doc = "`reset()` method sets SM0CVAL0CYC to value 0"]
+impl crate::Resettable for Sm0cval0cycSpec {}
