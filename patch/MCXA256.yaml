@@ -3,5 +3,6 @@
 _svd: "../svd/MCXA256.svd"
 
 _include:
-  - "port.yaml"
+  - "lpi2c.yaml"
   - "mrcc.yaml"
+  - "port.yaml"
