@@ -7,22 +7,22 @@ pub type DataW<'a, REG> = crate::FieldWriter<'a, REG, 8>;
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
 pub enum Cmd {
-    #[doc = "0: Transmit the value in DATA\\[7:0\\]"]
-    TransmitData7Through0 = 0,
-    #[doc = "1: Receive (DATA\\[7:0\\] + 1) bytes"]
-    ReceiveData7Through0PlusOne = 1,
-    #[doc = "2: Generate Stop condition on I2C bus"]
-    GenerateStopCondition = 2,
-    #[doc = "3: Receive and discard (DATA\\[7:0\\] + 1) bytes"]
-    ReceiveAndDiscardData7Through0PlusOne = 3,
+    #[doc = "0: Transmit value in DATA\\[7:0\\]"]
+    Transmit = 0,
+    #[doc = "1: Receive (DATA\\[7:0\\] + 1) bytes."]
+    Receive = 1,
+    #[doc = "2: Generate Stop condition on I2C bus."]
+    Stop = 2,
+    #[doc = "3: Receive and discard (DATA\\[7:0\\] + 1) bytes."]
+    ReceiveAndDiscard = 3,
     #[doc = "4: Generate (repeated) Start on the I2C bus and transmit the address in DATA\\[7:0\\]"]
-    GenerateStartAndTransmitAddressInData7Through0 = 4,
-    #[doc = "5: Generate (repeated) Start on the I2C bus and transmit the address in DATA\\[7:0\\] (this transfer expects a NACK to be returned)"]
-    GenerateStartAndTransmitAddressInData7Through0ExpectNack = 5,
+    Start = 4,
+    #[doc = "5: Generate (repeated) Start on the I2C bus and transmit the address in DATA\\[7:0\\] expecting a NACK response"]
+    StartExpectNack = 5,
     #[doc = "6: Generate (repeated) Start on the I2C bus and transmit the address in DATA\\[7:0\\] using HS mode"]
-    GenerateStartAndTransmitAddressInData7Through0UsingHighSpeedMode = 6,
-    #[doc = "7: Generate (repeated) Start on the I2C bus and transmit the address in DATA\\[7:0\\] using HS mode (this transfer expects a NACK to be returned)"]
-    GenerateStartAndTransmitAddressInData7Through0UsingHighSpeedModeExpectNack = 7,
+    StartHs = 6,
+    #[doc = "7: Generate (repeated) Start on the I2C bus and transmit the address in DATA\\[7:0\\] using HS mode expecting a NACK response"]
+    StartHsExpectNack = 7,
 }
 impl From<Cmd> for u8 {
     #[inline(always)]
@@ -41,49 +41,45 @@ where
     REG: crate::Writable + crate::RegisterSpec,
     REG::Ux: From<u8>,
 {
-    #[doc = "Transmit the value in DATA\\[7:0\\]"]
+    #[doc = "Transmit value in DATA\\[7:0\\]"]
     #[inline(always)]
-    pub fn transmit_data_7_through_0(self) -> &'a mut crate::W<REG> {
-        self.variant(Cmd::TransmitData7Through0)
+    pub fn transmit(self) -> &'a mut crate::W<REG> {
+        self.variant(Cmd::Transmit)
     }
-    #[doc = "Receive (DATA\\[7:0\\] + 1) bytes"]
+    #[doc = "Receive (DATA\\[7:0\\] + 1) bytes."]
     #[inline(always)]
-    pub fn receive_data_7_through_0_plus_one(self) -> &'a mut crate::W<REG> {
-        self.variant(Cmd::ReceiveData7Through0PlusOne)
+    pub fn receive(self) -> &'a mut crate::W<REG> {
+        self.variant(Cmd::Receive)
     }
-    #[doc = "Generate Stop condition on I2C bus"]
+    #[doc = "Generate Stop condition on I2C bus."]
     #[inline(always)]
-    pub fn generate_stop_condition(self) -> &'a mut crate::W<REG> {
-        self.variant(Cmd::GenerateStopCondition)
+    pub fn stop(self) -> &'a mut crate::W<REG> {
+        self.variant(Cmd::Stop)
     }
-    #[doc = "Receive and discard (DATA\\[7:0\\] + 1) bytes"]
+    #[doc = "Receive and discard (DATA\\[7:0\\] + 1) bytes."]
     #[inline(always)]
-    pub fn receive_and_discard_data_7_through_0_plus_one(self) -> &'a mut crate::W<REG> {
-        self.variant(Cmd::ReceiveAndDiscardData7Through0PlusOne)
+    pub fn receive_and_discard(self) -> &'a mut crate::W<REG> {
+        self.variant(Cmd::ReceiveAndDiscard)
     }
     #[doc = "Generate (repeated) Start on the I2C bus and transmit the address in DATA\\[7:0\\]"]
     #[inline(always)]
-    pub fn generate_start_and_transmit_address_in_data_7_through_0(self) -> &'a mut crate::W<REG> {
-        self.variant(Cmd::GenerateStartAndTransmitAddressInData7Through0)
+    pub fn start(self) -> &'a mut crate::W<REG> {
+        self.variant(Cmd::Start)
     }
-    #[doc = "Generate (repeated) Start on the I2C bus and transmit the address in DATA\\[7:0\\] (this transfer expects a NACK to be returned)"]
+    #[doc = "Generate (repeated) Start on the I2C bus and transmit the address in DATA\\[7:0\\] expecting a NACK response"]
     #[inline(always)]
-    pub fn generate_start_and_transmit_address_in_data_7_through_0_expect_nack(self) -> &'a mut crate::W<REG> {
-        self.variant(Cmd::GenerateStartAndTransmitAddressInData7Through0ExpectNack)
+    pub fn start_expect_nack(self) -> &'a mut crate::W<REG> {
+        self.variant(Cmd::StartExpectNack)
     }
     #[doc = "Generate (repeated) Start on the I2C bus and transmit the address in DATA\\[7:0\\] using HS mode"]
     #[inline(always)]
-    pub fn generate_start_and_transmit_address_in_data_7_through_0_using_high_speed_mode(
-        self,
-    ) -> &'a mut crate::W<REG> {
-        self.variant(Cmd::GenerateStartAndTransmitAddressInData7Through0UsingHighSpeedMode)
+    pub fn start_hs(self) -> &'a mut crate::W<REG> {
+        self.variant(Cmd::StartHs)
     }
-    #[doc = "Generate (repeated) Start on the I2C bus and transmit the address in DATA\\[7:0\\] using HS mode (this transfer expects a NACK to be returned)"]
+    #[doc = "Generate (repeated) Start on the I2C bus and transmit the address in DATA\\[7:0\\] using HS mode expecting a NACK response"]
     #[inline(always)]
-    pub fn generate_start_and_transmit_address_in_data_7_through_0_using_high_speed_mode_expect_nack(
-        self,
-    ) -> &'a mut crate::W<REG> {
-        self.variant(Cmd::GenerateStartAndTransmitAddressInData7Through0UsingHighSpeedModeExpectNack)
+    pub fn start_hs_expect_nack(self) -> &'a mut crate::W<REG> {
+        self.variant(Cmd::StartHsExpectNack)
     }
 }
 #[cfg(feature = "debug")]

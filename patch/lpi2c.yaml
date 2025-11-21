@@ -1,0 +1,12 @@
+LPI2C*:
+  MTDR:
+    CMD:
+      _replace_enum:
+        Transmit: [0, "Transmit value in DATA[7:0]"]
+        Receive: [1, "Receive (DATA[7:0] + 1) bytes."]
+        Stop: [2, "Generate Stop condition on I2C bus."]
+        ReceiveAndDiscard: [3, "Receive and discard (DATA[7:0] + 1) bytes."]
+        Start: [4, "Generate (repeated) Start on the I2C bus and transmit the address in DATA[7:0]"]
+        StartExpectNack: [5, "Generate (repeated) Start on the I2C bus and transmit the address in DATA[7:0] expecting a NACK response"]
+        StartHs: [6, "Generate (repeated) Start on the I2C bus and transmit the address in DATA[7:0] using HS mode"]
+        StartHsExpectNack: [7, "Generate (repeated) Start on the I2C bus and transmit the address in DATA[7:0] using HS mode expecting a NACK response"]
