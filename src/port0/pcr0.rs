@@ -278,37 +278,37 @@ where
 #[repr(u8)]
 pub enum Mux {
     #[doc = "0: Alternative 0 (typically GPIO)"]
-    Mux0000 = 0,
+    Mux0 = 0,
     #[doc = "1: Alternative 1 (Pin/Port Dependent)"]
-    Mux0001 = 1,
+    Mux1 = 1,
     #[doc = "2: Alternative 2 (Pin/Port Dependent)"]
-    Mux0010 = 2,
+    Mux2 = 2,
     #[doc = "3: Alternative 3 (Pin/Port Dependent)"]
-    Mux0011 = 3,
+    Mux3 = 3,
     #[doc = "4: Alternative 4 (Pin/Port Dependent)"]
-    Mux0100 = 4,
+    Mux4 = 4,
     #[doc = "5: Alternative 5 (Pin/Port Dependent)"]
-    Mux0101 = 5,
+    Mux5 = 5,
     #[doc = "6: Alternative 6 (Pin/Port Dependent)"]
-    Mux0110 = 6,
+    Mux6 = 6,
     #[doc = "7: Alternative 7 (Pin/Port Dependent)"]
-    Mux0111 = 7,
+    Mux7 = 7,
     #[doc = "8: Alternative 8 (Pin/Port Dependent)"]
-    Mux1000 = 8,
+    Mux8 = 8,
     #[doc = "9: Alternative 9 (Pin/Port Dependent)"]
-    Mux1001 = 9,
+    Mux9 = 9,
     #[doc = "10: Alternative 10 (Pin/Port Dependent)"]
-    Mux1010 = 10,
+    Mux10 = 10,
     #[doc = "11: Alternative 11 (Pin/Port Dependent)"]
-    Mux1011 = 11,
+    Mux11 = 11,
     #[doc = "12: Alternative 12 (Pin/Port Dependent)"]
-    Mux1100 = 12,
+    Mux12 = 12,
     #[doc = "13: Alternative 13 (Pin/Port Dependent)"]
-    Mux1101 = 13,
+    Mux13 = 13,
     #[doc = "14: Alternative 14 (Pin/Port Dependent)"]
-    Mux1110 = 14,
+    Mux14 = 14,
     #[doc = "15: Alternative 15 (Pin/Port Dependent)"]
-    Mux1111 = 15,
+    Mux15 = 15,
 }
 impl From<Mux> for u8 {
     #[inline(always)]
@@ -327,104 +327,104 @@ impl MuxR {
     #[inline(always)]
     pub const fn variant(&self) -> Mux {
         match self.bits {
-            0 => Mux::Mux0000,
-            1 => Mux::Mux0001,
-            2 => Mux::Mux0010,
-            3 => Mux::Mux0011,
-            4 => Mux::Mux0100,
-            5 => Mux::Mux0101,
-            6 => Mux::Mux0110,
-            7 => Mux::Mux0111,
-            8 => Mux::Mux1000,
-            9 => Mux::Mux1001,
-            10 => Mux::Mux1010,
-            11 => Mux::Mux1011,
-            12 => Mux::Mux1100,
-            13 => Mux::Mux1101,
-            14 => Mux::Mux1110,
-            15 => Mux::Mux1111,
+            0 => Mux::Mux0,
+            1 => Mux::Mux1,
+            2 => Mux::Mux2,
+            3 => Mux::Mux3,
+            4 => Mux::Mux4,
+            5 => Mux::Mux5,
+            6 => Mux::Mux6,
+            7 => Mux::Mux7,
+            8 => Mux::Mux8,
+            9 => Mux::Mux9,
+            10 => Mux::Mux10,
+            11 => Mux::Mux11,
+            12 => Mux::Mux12,
+            13 => Mux::Mux13,
+            14 => Mux::Mux14,
+            15 => Mux::Mux15,
             _ => unreachable!(),
         }
     }
     #[doc = "Alternative 0 (typically GPIO)"]
     #[inline(always)]
-    pub fn is_mux0000(&self) -> bool {
-        *self == Mux::Mux0000
+    pub fn is_mux0(&self) -> bool {
+        *self == Mux::Mux0
     }
     #[doc = "Alternative 1 (Pin/Port Dependent)"]
     #[inline(always)]
-    pub fn is_mux0001(&self) -> bool {
-        *self == Mux::Mux0001
+    pub fn is_mux1(&self) -> bool {
+        *self == Mux::Mux1
     }
     #[doc = "Alternative 2 (Pin/Port Dependent)"]
     #[inline(always)]
-    pub fn is_mux0010(&self) -> bool {
-        *self == Mux::Mux0010
+    pub fn is_mux2(&self) -> bool {
+        *self == Mux::Mux2
     }
     #[doc = "Alternative 3 (Pin/Port Dependent)"]
     #[inline(always)]
-    pub fn is_mux0011(&self) -> bool {
-        *self == Mux::Mux0011
+    pub fn is_mux3(&self) -> bool {
+        *self == Mux::Mux3
     }
     #[doc = "Alternative 4 (Pin/Port Dependent)"]
     #[inline(always)]
-    pub fn is_mux0100(&self) -> bool {
-        *self == Mux::Mux0100
+    pub fn is_mux4(&self) -> bool {
+        *self == Mux::Mux4
     }
     #[doc = "Alternative 5 (Pin/Port Dependent)"]
     #[inline(always)]
-    pub fn is_mux0101(&self) -> bool {
-        *self == Mux::Mux0101
+    pub fn is_mux5(&self) -> bool {
+        *self == Mux::Mux5
     }
     #[doc = "Alternative 6 (Pin/Port Dependent)"]
     #[inline(always)]
-    pub fn is_mux0110(&self) -> bool {
-        *self == Mux::Mux0110
+    pub fn is_mux6(&self) -> bool {
+        *self == Mux::Mux6
     }
     #[doc = "Alternative 7 (Pin/Port Dependent)"]
     #[inline(always)]
-    pub fn is_mux0111(&self) -> bool {
-        *self == Mux::Mux0111
+    pub fn is_mux7(&self) -> bool {
+        *self == Mux::Mux7
     }
     #[doc = "Alternative 8 (Pin/Port Dependent)"]
     #[inline(always)]
-    pub fn is_mux1000(&self) -> bool {
-        *self == Mux::Mux1000
+    pub fn is_mux8(&self) -> bool {
+        *self == Mux::Mux8
     }
     #[doc = "Alternative 9 (Pin/Port Dependent)"]
     #[inline(always)]
-    pub fn is_mux1001(&self) -> bool {
-        *self == Mux::Mux1001
+    pub fn is_mux9(&self) -> bool {
+        *self == Mux::Mux9
     }
     #[doc = "Alternative 10 (Pin/Port Dependent)"]
     #[inline(always)]
-    pub fn is_mux1010(&self) -> bool {
-        *self == Mux::Mux1010
+    pub fn is_mux10(&self) -> bool {
+        *self == Mux::Mux10
     }
     #[doc = "Alternative 11 (Pin/Port Dependent)"]
     #[inline(always)]
-    pub fn is_mux1011(&self) -> bool {
-        *self == Mux::Mux1011
+    pub fn is_mux11(&self) -> bool {
+        *self == Mux::Mux11
     }
     #[doc = "Alternative 12 (Pin/Port Dependent)"]
     #[inline(always)]
-    pub fn is_mux1100(&self) -> bool {
-        *self == Mux::Mux1100
+    pub fn is_mux12(&self) -> bool {
+        *self == Mux::Mux12
     }
     #[doc = "Alternative 13 (Pin/Port Dependent)"]
     #[inline(always)]
-    pub fn is_mux1101(&self) -> bool {
-        *self == Mux::Mux1101
+    pub fn is_mux13(&self) -> bool {
+        *self == Mux::Mux13
     }
     #[doc = "Alternative 14 (Pin/Port Dependent)"]
     #[inline(always)]
-    pub fn is_mux1110(&self) -> bool {
-        *self == Mux::Mux1110
+    pub fn is_mux14(&self) -> bool {
+        *self == Mux::Mux14
     }
     #[doc = "Alternative 15 (Pin/Port Dependent)"]
     #[inline(always)]
-    pub fn is_mux1111(&self) -> bool {
-        *self == Mux::Mux1111
+    pub fn is_mux15(&self) -> bool {
+        *self == Mux::Mux15
     }
 }
 #[doc = "Field `MUX` writer - Pin Multiplex Control"]
@@ -436,83 +436,83 @@ where
 {
     #[doc = "Alternative 0 (typically GPIO)"]
     #[inline(always)]
-    pub fn mux0000(self) -> &'a mut crate::W<REG> {
-        self.variant(Mux::Mux0000)
+    pub fn mux0(self) -> &'a mut crate::W<REG> {
+        self.variant(Mux::Mux0)
     }
     #[doc = "Alternative 1 (Pin/Port Dependent)"]
     #[inline(always)]
-    pub fn mux0001(self) -> &'a mut crate::W<REG> {
-        self.variant(Mux::Mux0001)
+    pub fn mux1(self) -> &'a mut crate::W<REG> {
+        self.variant(Mux::Mux1)
     }
     #[doc = "Alternative 2 (Pin/Port Dependent)"]
     #[inline(always)]
-    pub fn mux0010(self) -> &'a mut crate::W<REG> {
-        self.variant(Mux::Mux0010)
+    pub fn mux2(self) -> &'a mut crate::W<REG> {
+        self.variant(Mux::Mux2)
     }
     #[doc = "Alternative 3 (Pin/Port Dependent)"]
     #[inline(always)]
-    pub fn mux0011(self) -> &'a mut crate::W<REG> {
-        self.variant(Mux::Mux0011)
+    pub fn mux3(self) -> &'a mut crate::W<REG> {
+        self.variant(Mux::Mux3)
     }
     #[doc = "Alternative 4 (Pin/Port Dependent)"]
     #[inline(always)]
-    pub fn mux0100(self) -> &'a mut crate::W<REG> {
-        self.variant(Mux::Mux0100)
+    pub fn mux4(self) -> &'a mut crate::W<REG> {
+        self.variant(Mux::Mux4)
     }
     #[doc = "Alternative 5 (Pin/Port Dependent)"]
     #[inline(always)]
-    pub fn mux0101(self) -> &'a mut crate::W<REG> {
-        self.variant(Mux::Mux0101)
+    pub fn mux5(self) -> &'a mut crate::W<REG> {
+        self.variant(Mux::Mux5)
     }
     #[doc = "Alternative 6 (Pin/Port Dependent)"]
     #[inline(always)]
-    pub fn mux0110(self) -> &'a mut crate::W<REG> {
-        self.variant(Mux::Mux0110)
+    pub fn mux6(self) -> &'a mut crate::W<REG> {
+        self.variant(Mux::Mux6)
     }
     #[doc = "Alternative 7 (Pin/Port Dependent)"]
     #[inline(always)]
-    pub fn mux0111(self) -> &'a mut crate::W<REG> {
-        self.variant(Mux::Mux0111)
+    pub fn mux7(self) -> &'a mut crate::W<REG> {
+        self.variant(Mux::Mux7)
     }
     #[doc = "Alternative 8 (Pin/Port Dependent)"]
     #[inline(always)]
-    pub fn mux1000(self) -> &'a mut crate::W<REG> {
-        self.variant(Mux::Mux1000)
+    pub fn mux8(self) -> &'a mut crate::W<REG> {
+        self.variant(Mux::Mux8)
     }
     #[doc = "Alternative 9 (Pin/Port Dependent)"]
     #[inline(always)]
-    pub fn mux1001(self) -> &'a mut crate::W<REG> {
-        self.variant(Mux::Mux1001)
+    pub fn mux9(self) -> &'a mut crate::W<REG> {
+        self.variant(Mux::Mux9)
     }
     #[doc = "Alternative 10 (Pin/Port Dependent)"]
     #[inline(always)]
-    pub fn mux1010(self) -> &'a mut crate::W<REG> {
-        self.variant(Mux::Mux1010)
+    pub fn mux10(self) -> &'a mut crate::W<REG> {
+        self.variant(Mux::Mux10)
     }
     #[doc = "Alternative 11 (Pin/Port Dependent)"]
     #[inline(always)]
-    pub fn mux1011(self) -> &'a mut crate::W<REG> {
-        self.variant(Mux::Mux1011)
+    pub fn mux11(self) -> &'a mut crate::W<REG> {
+        self.variant(Mux::Mux11)
     }
     #[doc = "Alternative 12 (Pin/Port Dependent)"]
     #[inline(always)]
-    pub fn mux1100(self) -> &'a mut crate::W<REG> {
-        self.variant(Mux::Mux1100)
+    pub fn mux12(self) -> &'a mut crate::W<REG> {
+        self.variant(Mux::Mux12)
     }
     #[doc = "Alternative 13 (Pin/Port Dependent)"]
     #[inline(always)]
-    pub fn mux1101(self) -> &'a mut crate::W<REG> {
-        self.variant(Mux::Mux1101)
+    pub fn mux13(self) -> &'a mut crate::W<REG> {
+        self.variant(Mux::Mux13)
     }
     #[doc = "Alternative 14 (Pin/Port Dependent)"]
     #[inline(always)]
-    pub fn mux1110(self) -> &'a mut crate::W<REG> {
-        self.variant(Mux::Mux1110)
+    pub fn mux14(self) -> &'a mut crate::W<REG> {
+        self.variant(Mux::Mux14)
     }
     #[doc = "Alternative 15 (Pin/Port Dependent)"]
     #[inline(always)]
-    pub fn mux1111(self) -> &'a mut crate::W<REG> {
-        self.variant(Mux::Mux1111)
+    pub fn mux15(self) -> &'a mut crate::W<REG> {
+        self.variant(Mux::Mux15)
     }
 }
 #[doc = "Input Buffer Enable\n\nValue on reset: 1"]
