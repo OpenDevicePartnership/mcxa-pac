@@ -1,4 +1,26 @@
 PORT0:
+  PCR0:
+    _modify:
+      MUX:
+        bitWidth: 4
+    MUX:
+      _replace_enum:
+        Mux0000: [0, "Alternative 0 (typically GPIO)"]
+        Mux0001: [1, "Alternative 1 (Pin/Port Dependent)"]
+        Mux0010: [2, "Alternative 2 (Pin/Port Dependent)"]
+        Mux0011: [3, "Alternative 3 (Pin/Port Dependent)"]
+        Mux0100: [4, "Alternative 4 (Pin/Port Dependent)"]
+        Mux0101: [5, "Alternative 5 (Pin/Port Dependent)"]
+        Mux0110: [6, "Alternative 6 (Pin/Port Dependent)"]
+        Mux0111: [7, "Alternative 7 (Pin/Port Dependent)"]
+        Mux1000: [8, "Alternative 8 (Pin/Port Dependent)"]
+        Mux1001: [9, "Alternative 9 (Pin/Port Dependent)"]
+        Mux1010: [10, "Alternative 10 (Pin/Port Dependent)"]
+        Mux1011: [11, "Alternative 11 (Pin/Port Dependent)"]
+        Mux1100: [12, "Alternative 12 (Pin/Port Dependent)"]
+        Mux1101: [13, "Alternative 13 (Pin/Port Dependent)"]
+        Mux1110: [14, "Alternative 14 (Pin/Port Dependent)"]
+        Mux1111: [15, "Alternative 15 (Pin/Port Dependent)"]
   _modify:
     PCR1:
       derivedFrom: PCR0
