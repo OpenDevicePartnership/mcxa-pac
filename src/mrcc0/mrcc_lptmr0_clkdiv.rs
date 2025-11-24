@@ -10,10 +10,10 @@ pub type DivW<'a, REG> = crate::FieldWriter<'a, REG, 4>;
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum Reset {
-    #[doc = "0: Divider isn't reset"]
-    On = 0,
-    #[doc = "1: Divider is reset"]
-    Off = 1,
+    #[doc = "0: Reset is released/disabled (clock is running)"]
+    Deasserted = 0,
+    #[doc = "1: Reset is active/enabled (clock is NOT running)"]
+    Asserted = 1,
 }
 impl From<Reset> for bool {
     #[inline(always)]
@@ -27,25 +27,25 @@ impl<'a, REG> ResetW<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
-    #[doc = "Divider isn't reset"]
+    #[doc = "Reset is released/disabled (clock is running)"]
     #[inline(always)]
-    pub fn on(self) -> &'a mut crate::W<REG> {
-        self.variant(Reset::On)
+    pub fn deasserted(self) -> &'a mut crate::W<REG> {
+        self.variant(Reset::Deasserted)
     }
-    #[doc = "Divider is reset"]
+    #[doc = "Reset is active/enabled (clock is NOT running)"]
     #[inline(always)]
-    pub fn off(self) -> &'a mut crate::W<REG> {
-        self.variant(Reset::Off)
+    pub fn asserted(self) -> &'a mut crate::W<REG> {
+        self.variant(Reset::Asserted)
     }
 }
 #[doc = "Halt divider counter\n\nValue on reset: 1"]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum Halt {
-    #[doc = "0: Divider clock is running"]
-    On = 0,
-    #[doc = "1: Divider clock is stopped"]
-    Off = 1,
+    #[doc = "0: Halt is inactive/disabled (clock is running)"]
+    Deasserted = 0,
+    #[doc = "1: Halt is active/enabled (clock is NOT running)"]
+    Asserted = 1,
 }
 impl From<Halt> for bool {
     #[inline(always)]
@@ -60,19 +60,19 @@ impl HaltR {
     #[inline(always)]
     pub const fn variant(&self) -> Halt {
         match self.bits {
-            false => Halt::On,
-            true => Halt::Off,
+            false => Halt::Deasserted,
+            true => Halt::Asserted,
         }
     }
-    #[doc = "Divider clock is running"]
+    #[doc = "Halt is inactive/disabled (clock is running)"]
     #[inline(always)]
-    pub fn is_on(&self) -> bool {
-        *self == Halt::On
+    pub fn is_deasserted(&self) -> bool {
+        *self == Halt::Deasserted
     }
-    #[doc = "Divider clock is stopped"]
+    #[doc = "Halt is active/enabled (clock is NOT running)"]
     #[inline(always)]
-    pub fn is_off(&self) -> bool {
-        *self == Halt::Off
+    pub fn is_asserted(&self) -> bool {
+        *self == Halt::Asserted
     }
 }
 #[doc = "Field `HALT` writer - Halt divider counter"]
@@ -81,25 +81,25 @@ impl<'a, REG> HaltW<'a, REG>
 where
     REG: crate::Writable + crate::RegisterSpec,
 {
-    #[doc = "Divider clock is running"]
+    #[doc = "Halt is inactive/disabled (clock is running)"]
     #[inline(always)]
-    pub fn on(self) -> &'a mut crate::W<REG> {
-        self.variant(Halt::On)
+    pub fn deasserted(self) -> &'a mut crate::W<REG> {
+        self.variant(Halt::Deasserted)
     }
-    #[doc = "Divider clock is stopped"]
+    #[doc = "Halt is active/enabled (clock is NOT running)"]
     #[inline(always)]
-    pub fn off(self) -> &'a mut crate::W<REG> {
-        self.variant(Halt::Off)
+    pub fn asserted(self) -> &'a mut crate::W<REG> {
+        self.variant(Halt::Asserted)
     }
 }
 #[doc = "Divider status flag\n\nValue on reset: 0"]
 #[cfg_attr(feature = "defmt", derive(defmt::Format))]
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 pub enum Unstab {
-    #[doc = "0: Divider clock is stable"]
-    On = 0,
-    #[doc = "1: Clock frequency isn't stable"]
-    Off = 1,
+    #[doc = "0: Clock divider is stable"]
+    Stable = 0,
+    #[doc = "1: Clock divider is unstable"]
+    Unstable = 1,
 }
 impl From<Unstab> for bool {
     #[inline(always)]
@@ -114,19 +114,19 @@ impl UnstabR {
     #[inline(always)]
     pub const fn variant(&self) -> Unstab {
         match self.bits {
-            false => Unstab::On,
-            true => Unstab::Off,
+            false => Unstab::Stable,
+            true => Unstab::Unstable,
         }
     }
-    #[doc = "Divider clock is stable"]
+    #[doc = "Clock divider is stable"]
     #[inline(always)]
-    pub fn is_on(&self) -> bool {
-        *self == Unstab::On
+    pub fn is_stable(&self) -> bool {
+        *self == Unstab::Stable
     }
-    #[doc = "Clock frequency isn't stable"]
+    #[doc = "Clock divider is unstable"]
     #[inline(always)]
-    pub fn is_off(&self) -> bool {
-        *self == Unstab::Off
+    pub fn is_unstable(&self) -> bool {
+        *self == Unstab::Unstable
     }
 }
 impl R {
