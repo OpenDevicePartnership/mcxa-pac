@@ -1,4 +1,17 @@
 MRCC0:
+  "MRCC_*_CLKDIV":
+    RESET:
+      _replace_enum:
+        Deasserted: [0, "Reset is released/disabled (clock is running)"]
+        Asserted: [1, "Reset is active/enabled (clock is NOT running)"]
+    HALT:
+      _replace_enum:
+        Deasserted: [0, "Halt is inactive/disabled (clock is running)"]
+        Asserted: [1, "Halt is active/enabled (clock is NOT running)"]
+    UNSTAB:
+      _replace_enum:
+        Stable: [0, "Clock divider is stable"]
+        Unstable: [1, "Clock divider is unstable"]
   _modify:
     MRCC_LPUART[12345]_CLKSEL:
       derivedFrom: MRCC_LPUART0_CLKSEL
