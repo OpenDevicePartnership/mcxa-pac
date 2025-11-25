@@ -1,0 +1,4 @@
+_add:
+  LPUART5:
+    derivedFrom: LPUART0
+    baseAddress: "0x400DA000"

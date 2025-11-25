@@ -774,6 +774,15 @@ impl core::fmt::Debug for Lpi2c3 {
 }
 #[doc = "Low-Power Inter-Integrated Circuit"]
 pub use self::lpi2c0 as lpi2c3;
+#[doc = "LPUART"]
+pub type Lpuart5 = crate::Periph<lpuart0::RegisterBlock, 0x400d_a000>;
+impl core::fmt::Debug for Lpuart5 {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("Lpuart5").finish()
+    }
+}
+#[doc = "LPUART"]
+pub use self::lpuart0 as lpuart5;
 #[doc = "Low-Power Serial Peripheral Interface"]
 pub type Lpspi0 = crate::Periph<lpspi0::RegisterBlock, 0x4009_c000>;
 impl core::fmt::Debug for Lpspi0 {
@@ -1252,6 +1261,8 @@ pub struct Peripherals {
     pub lpi2c2: Lpi2c2,
     #[doc = "LPI2C3"]
     pub lpi2c3: Lpi2c3,
+    #[doc = "LPUART5"]
+    pub lpuart5: Lpuart5,
     #[doc = "LPSPI0"]
     pub lpspi0: Lpspi0,
     #[doc = "LPSPI1"]
@@ -1398,6 +1409,7 @@ impl Peripherals {
             lpi2c1: Lpi2c1::steal(),
             lpi2c2: Lpi2c2::steal(),
             lpi2c3: Lpi2c3::steal(),
+            lpuart5: Lpuart5::steal(),
             lpspi0: Lpspi0::steal(),
             lpspi1: Lpspi1::steal(),
             lpuart0: Lpuart0::steal(),
