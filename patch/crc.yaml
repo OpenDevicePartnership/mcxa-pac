@@ -1,0 +1,46 @@
+CRC0:
+  _add:
+    DATA32:
+      description: CRC data register, 32-bit access
+      addressOffset: 0
+      size: 32
+      resetValue: 0xffffffff
+      resetMask: 0
+      access: read-write
+      alternateGroup: DATA
+
+    DATA16:
+      description: CRC data register, 16-bit access
+      addressOffset: 0
+      size: 16
+      resetValue: 0xffff
+      resetMask: 0
+      access: read-write
+      alternateGroup: DATA
+
+    DATA8:
+      description: CRC data register, 8-bit access
+      addressOffset: 0
+      size: 8
+      resetValue: 0xff
+      resetMask: 0
+      access: read-write
+      alternateGroup: DATA
+
+    GPOLY32:
+      description: Polynomial, 32-bit access
+      addressOffset: 4
+      size: 32
+      resetValue: 0x00001021
+      resetMask: 0
+      access: read-write
+      alternateGroup: GPOLY
+
+    GPOLY16:
+      description: Polynomial, 16-bit access
+      addressOffset: 4
+      size: 16
+      resetValue: 0x1021
+      resetMask: 0
+      access: read-write
+      alternateGroup: GPOLY
