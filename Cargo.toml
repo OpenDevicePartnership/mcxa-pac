@@ -8,7 +8,7 @@ repository = "https://github.com/OpenDevicePartnership/mcxa-pac"
 readme = "README.md"
 keywords = ["nxp", "mcxa", "mcxa256", "no_std", "embedded"]
 categories = ["embedded", "no-std"]
-rust-version = "1.91"
+rust-version = "1.90"
 exclude = ["svd/*", "patch/*"]
 
 [dependencies]
