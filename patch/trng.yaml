@@ -1,0 +1,30 @@
+TRNG0:
+  _add:
+    ENT1:
+      derivedFrom: ENT0
+      addressOffset: 0x44
+
+    ENT2:
+      derivedFrom: ENT0
+      addressOffset: 0x48
+
+    ENT3:
+      derivedFrom: ENT0
+      addressOffset: 0x4c
+
+    ENT4:
+      derivedFrom: ENT0
+      addressOffset: 0x50
+
+    ENT5:
+      derivedFrom: ENT0
+      addressOffset: 0x54
+
+    ENT6:
+      derivedFrom: ENT0
+      addressOffset: 0x58
+
+    ENT7:
+      derivedFrom: ENT0
+      addressOffset: 0x5c
+
