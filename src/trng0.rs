@@ -19,7 +19,14 @@ pub struct RegisterBlock {
     _reserved_14_scr: [u8; 0x04],
     status: Status,
     ent0: Ent0,
-    _reserved17: [u8; 0x3c],
+    ent1: Ent1,
+    ent2: Ent2,
+    ent3: Ent3,
+    ent4: Ent4,
+    ent5: Ent5,
+    ent6: Ent6,
+    ent7: Ent7,
+    _reserved24: [u8; 0x20],
     pkrcnt10: Pkrcnt10,
     pkrcnt32: Pkrcnt32,
     pkrcnt54: Pkrcnt54,
@@ -34,7 +41,7 @@ pub struct RegisterBlock {
     int_status: IntStatus,
     cser: Cser,
     csclr: Csclr,
-    _reserved31: [u8; 0x34],
+    _reserved38: [u8; 0x34],
     osc2_ctl: Osc2Ctl,
     vid1: Vid1,
     vid2: Vid2,
@@ -179,6 +186,41 @@ impl RegisterBlock {
     #[inline(always)]
     pub const fn ent0(&self) -> &Ent0 {
         &self.ent0
+    }
+    #[doc = "0x44 - Entropy Read Register"]
+    #[inline(always)]
+    pub const fn ent1(&self) -> &Ent1 {
+        &self.ent1
+    }
+    #[doc = "0x48 - Entropy Read Register"]
+    #[inline(always)]
+    pub const fn ent2(&self) -> &Ent2 {
+        &self.ent2
+    }
+    #[doc = "0x4c - Entropy Read Register"]
+    #[inline(always)]
+    pub const fn ent3(&self) -> &Ent3 {
+        &self.ent3
+    }
+    #[doc = "0x50 - Entropy Read Register"]
+    #[inline(always)]
+    pub const fn ent4(&self) -> &Ent4 {
+        &self.ent4
+    }
+    #[doc = "0x54 - Entropy Read Register"]
+    #[inline(always)]
+    pub const fn ent5(&self) -> &Ent5 {
+        &self.ent5
+    }
+    #[doc = "0x58 - Entropy Read Register"]
+    #[inline(always)]
+    pub const fn ent6(&self) -> &Ent6 {
+        &self.ent6
+    }
+    #[doc = "0x5c - Entropy Read Register"]
+    #[inline(always)]
+    pub const fn ent7(&self) -> &Ent7 {
+        &self.ent7
     }
     #[doc = "0x80 - Statistical Check Poker Count 1 and 0 Register"]
     #[inline(always)]
@@ -491,3 +533,17 @@ pub mod vid1;
 pub type Vid2 = crate::Reg<vid2::Vid2Spec>;
 #[doc = "Version ID Register (LS)"]
 pub mod vid2;
+pub use ent0 as ent1;
+pub use ent0 as ent2;
+pub use ent0 as ent3;
+pub use ent0 as ent4;
+pub use ent0 as ent5;
+pub use ent0 as ent6;
+pub use ent0 as ent7;
+pub use Ent0 as Ent1;
+pub use Ent0 as Ent2;
+pub use Ent0 as Ent3;
+pub use Ent0 as Ent4;
+pub use Ent0 as Ent5;
+pub use Ent0 as Ent6;
+pub use Ent0 as Ent7;

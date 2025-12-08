@@ -9,3 +9,4 @@ _include:
   - "lpuart.yaml"
   - "mrcc.yaml"
   - "port.yaml"
+  - "trng.yaml"
