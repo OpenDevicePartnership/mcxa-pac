@@ -1,0 +1,16 @@
+_add:
+  ADC2:
+    derivedFrom: ADC0
+    baseAddress: "0x400f0000"
+    interrupts:
+      ADC2:
+        description: ADC2
+        value: 116
+
+  ADC3:
+    derivedFrom: ADC0
+    baseAddress: "0x400f1000"
+    interrupts:
+      ADC3:
+        description: ADC3
+        value: 117
