@@ -3,6 +3,7 @@
 _svd: "../svd/MCXA256.svd"
 
 _include:
+  - "adc.yaml"
   - "crc.yaml"
   - "lpi2c.yaml"
   - "lpuart.yaml"

@@ -1179,6 +1179,24 @@ impl core::fmt::Debug for Sau {
 }
 #[doc = "Security Attribution Unit"]
 pub mod sau;
+#[doc = "ADC"]
+pub type Adc2 = crate::Periph<adc0::RegisterBlock, 0x400f_0000>;
+impl core::fmt::Debug for Adc2 {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("Adc2").finish()
+    }
+}
+#[doc = "ADC"]
+pub use self::adc0 as adc2;
+#[doc = "ADC"]
+pub type Adc3 = crate::Periph<adc0::RegisterBlock, 0x400f_1000>;
+impl core::fmt::Debug for Adc3 {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("Adc3").finish()
+    }
+}
+#[doc = "ADC"]
+pub use self::adc0 as adc3;
 #[doc = "LPUART"]
 pub type Lpuart5 = crate::Periph<lpuart0::RegisterBlock, 0x400d_a000>;
 impl core::fmt::Debug for Lpuart5 {
@@ -1351,6 +1369,10 @@ pub struct Peripherals {
     pub scn_scb: ScnScb,
     #[doc = "SAU"]
     pub sau: Sau,
+    #[doc = "ADC2"]
+    pub adc2: Adc2,
+    #[doc = "ADC3"]
+    pub adc3: Adc3,
     #[doc = "LPUART5"]
     pub lpuart5: Lpuart5,
 }
@@ -1454,6 +1476,8 @@ impl Peripherals {
             mau0: Mau0::steal(),
             scn_scb: ScnScb::steal(),
             sau: Sau::steal(),
+            adc2: Adc2::steal(),
+            adc3: Adc3::steal(),
             lpuart5: Lpuart5::steal(),
         }
     }
