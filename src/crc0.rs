@@ -53,16 +53,6 @@ impl RegisterBlock {
 pub type Data = crate::Reg<data::DataSpec>;
 #[doc = "Data"]
 pub mod data;
-#[doc = "GPOLY (rw) register accessor: Polynomial\n\nYou can [`read`](crate::Reg::read) this register and get [`gpoly::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`gpoly::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@gpoly`] module"]
-#[doc(alias = "GPOLY")]
-pub type Gpoly = crate::Reg<gpoly::GpolySpec>;
-#[doc = "Polynomial"]
-pub mod gpoly;
-#[doc = "CTRL (rw) register accessor: Control\n\nYou can [`read`](crate::Reg::read) this register and get [`ctrl::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ctrl::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@ctrl`] module"]
-#[doc(alias = "CTRL")]
-pub type Ctrl = crate::Reg<ctrl::CtrlSpec>;
-#[doc = "Control"]
-pub mod ctrl;
 #[doc = "DATA32 (rw) register accessor: CRC data register, 32-bit access\n\nYou can [`read`](crate::Reg::read) this register and get [`data32::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`data32::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@data32`] module"]
 #[doc(alias = "DATA32")]
 pub type Data32 = crate::Reg<data32::Data32Spec>;
@@ -78,6 +68,11 @@ pub mod data16;
 pub type Data8 = crate::Reg<data8::Data8Spec>;
 #[doc = "CRC data register, 8-bit access"]
 pub mod data8;
+#[doc = "GPOLY (rw) register accessor: Polynomial\n\nYou can [`read`](crate::Reg::read) this register and get [`gpoly::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`gpoly::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@gpoly`] module"]
+#[doc(alias = "GPOLY")]
+pub type Gpoly = crate::Reg<gpoly::GpolySpec>;
+#[doc = "Polynomial"]
+pub mod gpoly;
 #[doc = "GPOLY32 (rw) register accessor: Polynomial, 32-bit access\n\nYou can [`read`](crate::Reg::read) this register and get [`gpoly32::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`gpoly32::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@gpoly32`] module"]
 #[doc(alias = "GPOLY32")]
 pub type Gpoly32 = crate::Reg<gpoly32::Gpoly32Spec>;
@@ -88,3 +83,8 @@ pub mod gpoly32;
 pub type Gpoly16 = crate::Reg<gpoly16::Gpoly16Spec>;
 #[doc = "Polynomial, 16-bit access"]
 pub mod gpoly16;
+#[doc = "CTRL (rw) register accessor: Control\n\nYou can [`read`](crate::Reg::read) this register and get [`ctrl::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ctrl::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@ctrl`] module"]
+#[doc(alias = "CTRL")]
+pub type Ctrl = crate::Reg<ctrl::CtrlSpec>;
+#[doc = "Control"]
+pub mod ctrl;

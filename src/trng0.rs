@@ -18,15 +18,8 @@ pub struct RegisterBlock {
     _reserved_13_scr: [u8; 0x04],
     _reserved_14_scr: [u8; 0x04],
     status: Status,
-    ent0: Ent0,
-    ent1: Ent1,
-    ent2: Ent2,
-    ent3: Ent3,
-    ent4: Ent4,
-    ent5: Ent5,
-    ent6: Ent6,
-    ent7: Ent7,
-    _reserved24: [u8; 0x20],
+    ent: [Ent; 8],
+    _reserved17: [u8; 0x20],
     pkrcnt10: Pkrcnt10,
     pkrcnt32: Pkrcnt32,
     pkrcnt54: Pkrcnt54,
@@ -41,7 +34,7 @@ pub struct RegisterBlock {
     int_status: IntStatus,
     cser: Cser,
     csclr: Csclr,
-    _reserved38: [u8; 0x34],
+    _reserved31: [u8; 0x34],
     osc2_ctl: Osc2Ctl,
     vid1: Vid1,
     vid2: Vid2,
@@ -182,45 +175,16 @@ impl RegisterBlock {
     pub const fn status(&self) -> &Status {
         &self.status
     }
-    #[doc = "0x40 - Entropy Read Register"]
+    #[doc = "0x40..0x60 - Entropy Read Register"]
     #[inline(always)]
-    pub const fn ent0(&self) -> &Ent0 {
-        &self.ent0
+    pub const fn ent(&self, n: usize) -> &Ent {
+        &self.ent[n]
     }
-    #[doc = "0x44 - Entropy Read Register"]
+    #[doc = "Iterator for array of:"]
+    #[doc = "0x40..0x60 - Entropy Read Register"]
     #[inline(always)]
-    pub const fn ent1(&self) -> &Ent1 {
-        &self.ent1
-    }
-    #[doc = "0x48 - Entropy Read Register"]
-    #[inline(always)]
-    pub const fn ent2(&self) -> &Ent2 {
-        &self.ent2
-    }
-    #[doc = "0x4c - Entropy Read Register"]
-    #[inline(always)]
-    pub const fn ent3(&self) -> &Ent3 {
-        &self.ent3
-    }
-    #[doc = "0x50 - Entropy Read Register"]
-    #[inline(always)]
-    pub const fn ent4(&self) -> &Ent4 {
-        &self.ent4
-    }
-    #[doc = "0x54 - Entropy Read Register"]
-    #[inline(always)]
-    pub const fn ent5(&self) -> &Ent5 {
-        &self.ent5
-    }
-    #[doc = "0x58 - Entropy Read Register"]
-    #[inline(always)]
-    pub const fn ent6(&self) -> &Ent6 {
-        &self.ent6
-    }
-    #[doc = "0x5c - Entropy Read Register"]
-    #[inline(always)]
-    pub const fn ent7(&self) -> &Ent7 {
-        &self.ent7
+    pub fn ent_iter(&self) -> impl Iterator<Item = &Ent> {
+        self.ent.iter()
     }
     #[doc = "0x80 - Statistical Check Poker Count 1 and 0 Register"]
     #[inline(always)]
@@ -443,11 +407,11 @@ pub mod scr6pl;
 pub type Status = crate::Reg<status::StatusSpec>;
 #[doc = "Status Register"]
 pub mod status;
-#[doc = "ENT0 (r) register accessor: Entropy Read Register\n\nYou can [`read`](crate::Reg::read) this register and get [`ent0::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@ent0`] module"]
-#[doc(alias = "ENT0")]
-pub type Ent0 = crate::Reg<ent0::Ent0Spec>;
+#[doc = "ENT (rw) register accessor: Entropy Read Register\n\nYou can [`read`](crate::Reg::read) this register and get [`ent::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`ent::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@ent`] module"]
+#[doc(alias = "ENT")]
+pub type Ent = crate::Reg<ent::EntSpec>;
 #[doc = "Entropy Read Register"]
-pub mod ent0;
+pub mod ent;
 #[doc = "PKRCNT10 (r) register accessor: Statistical Check Poker Count 1 and 0 Register\n\nYou can [`read`](crate::Reg::read) this register and get [`pkrcnt10::R`]. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@pkrcnt10`] module"]
 #[doc(alias = "PKRCNT10")]
 pub type Pkrcnt10 = crate::Reg<pkrcnt10::Pkrcnt10Spec>;
@@ -533,17 +497,3 @@ pub mod vid1;
 pub type Vid2 = crate::Reg<vid2::Vid2Spec>;
 #[doc = "Version ID Register (LS)"]
 pub mod vid2;
-pub use ent0 as ent1;
-pub use ent0 as ent2;
-pub use ent0 as ent3;
-pub use ent0 as ent4;
-pub use ent0 as ent5;
-pub use ent0 as ent6;
-pub use ent0 as ent7;
-pub use Ent0 as Ent1;
-pub use Ent0 as Ent2;
-pub use Ent0 as Ent3;
-pub use Ent0 as Ent4;
-pub use Ent0 as Ent5;
-pub use Ent0 as Ent6;
-pub use Ent0 as Ent7;
