@@ -367,66 +367,30 @@ pub mod cmdl1;
 pub type Cmdh1 = crate::Reg<cmdh1::Cmdh1Spec>;
 #[doc = "Command High Buffer Register"]
 pub mod cmdh1;
-#[doc = "CMDL2 (rw) register accessor: Command Low Buffer Register\n\nYou can [`read`](crate::Reg::read) this register and get [`cmdl2::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`cmdl2::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@cmdl2`] module"]
-#[doc(alias = "CMDL2")]
-pub type Cmdl2 = crate::Reg<cmdl2::Cmdl2Spec>;
-#[doc = "Command Low Buffer Register"]
-pub mod cmdl2;
-#[doc = "CMDH2 (rw) register accessor: Command High Buffer Register\n\nYou can [`read`](crate::Reg::read) this register and get [`cmdh2::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`cmdh2::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@cmdh2`] module"]
-#[doc(alias = "CMDH2")]
-pub type Cmdh2 = crate::Reg<cmdh2::Cmdh2Spec>;
-#[doc = "Command High Buffer Register"]
-pub mod cmdh2;
-#[doc = "CMDL3 (rw) register accessor: Command Low Buffer Register\n\nYou can [`read`](crate::Reg::read) this register and get [`cmdl3::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`cmdl3::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@cmdl3`] module"]
-#[doc(alias = "CMDL3")]
-pub type Cmdl3 = crate::Reg<cmdl3::Cmdl3Spec>;
-#[doc = "Command Low Buffer Register"]
-pub mod cmdl3;
-#[doc = "CMDH3 (rw) register accessor: Command High Buffer Register\n\nYou can [`read`](crate::Reg::read) this register and get [`cmdh3::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`cmdh3::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@cmdh3`] module"]
-#[doc(alias = "CMDH3")]
-pub type Cmdh3 = crate::Reg<cmdh3::Cmdh3Spec>;
-#[doc = "Command High Buffer Register"]
-pub mod cmdh3;
-#[doc = "CMDL4 (rw) register accessor: Command Low Buffer Register\n\nYou can [`read`](crate::Reg::read) this register and get [`cmdl4::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`cmdl4::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@cmdl4`] module"]
-#[doc(alias = "CMDL4")]
-pub type Cmdl4 = crate::Reg<cmdl4::Cmdl4Spec>;
-#[doc = "Command Low Buffer Register"]
-pub mod cmdl4;
-#[doc = "CMDH4 (rw) register accessor: Command High Buffer Register\n\nYou can [`read`](crate::Reg::read) this register and get [`cmdh4::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`cmdh4::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@cmdh4`] module"]
-#[doc(alias = "CMDH4")]
-pub type Cmdh4 = crate::Reg<cmdh4::Cmdh4Spec>;
-#[doc = "Command High Buffer Register"]
-pub mod cmdh4;
-#[doc = "CMDL5 (rw) register accessor: Command Low Buffer Register\n\nYou can [`read`](crate::Reg::read) this register and get [`cmdl5::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`cmdl5::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@cmdl5`] module"]
-#[doc(alias = "CMDL5")]
-pub type Cmdl5 = crate::Reg<cmdl5::Cmdl5Spec>;
-#[doc = "Command Low Buffer Register"]
-pub mod cmdl5;
-#[doc = "CMDH5 (rw) register accessor: Command High Buffer Register\n\nYou can [`read`](crate::Reg::read) this register and get [`cmdh5::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`cmdh5::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@cmdh5`] module"]
-#[doc(alias = "CMDH5")]
-pub type Cmdh5 = crate::Reg<cmdh5::Cmdh5Spec>;
-#[doc = "Command High Buffer Register"]
-pub mod cmdh5;
-#[doc = "CMDL6 (rw) register accessor: Command Low Buffer Register\n\nYou can [`read`](crate::Reg::read) this register and get [`cmdl6::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`cmdl6::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@cmdl6`] module"]
-#[doc(alias = "CMDL6")]
-pub type Cmdl6 = crate::Reg<cmdl6::Cmdl6Spec>;
-#[doc = "Command Low Buffer Register"]
-pub mod cmdl6;
-#[doc = "CMDH6 (rw) register accessor: Command High Buffer Register\n\nYou can [`read`](crate::Reg::read) this register and get [`cmdh6::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`cmdh6::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@cmdh6`] module"]
-#[doc(alias = "CMDH6")]
-pub type Cmdh6 = crate::Reg<cmdh6::Cmdh6Spec>;
-#[doc = "Command High Buffer Register"]
-pub mod cmdh6;
-#[doc = "CMDL7 (rw) register accessor: Command Low Buffer Register\n\nYou can [`read`](crate::Reg::read) this register and get [`cmdl7::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`cmdl7::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@cmdl7`] module"]
-#[doc(alias = "CMDL7")]
-pub type Cmdl7 = crate::Reg<cmdl7::Cmdl7Spec>;
-#[doc = "Command Low Buffer Register"]
-pub mod cmdl7;
-#[doc = "CMDH7 (rw) register accessor: Command High Buffer Register\n\nYou can [`read`](crate::Reg::read) this register and get [`cmdh7::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`cmdh7::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@cmdh7`] module"]
-#[doc(alias = "CMDH7")]
-pub type Cmdh7 = crate::Reg<cmdh7::Cmdh7Spec>;
-#[doc = "Command High Buffer Register"]
-pub mod cmdh7;
+pub use cmdh1 as cmdh2;
+pub use cmdh1 as cmdh3;
+pub use cmdh1 as cmdh4;
+pub use cmdh1 as cmdh5;
+pub use cmdh1 as cmdh6;
+pub use cmdh1 as cmdh7;
+pub use cmdl1 as cmdl2;
+pub use cmdl1 as cmdl3;
+pub use cmdl1 as cmdl4;
+pub use cmdl1 as cmdl5;
+pub use cmdl1 as cmdl6;
+pub use cmdl1 as cmdl7;
+pub use Cmdh1 as Cmdh2;
+pub use Cmdh1 as Cmdh3;
+pub use Cmdh1 as Cmdh4;
+pub use Cmdh1 as Cmdh5;
+pub use Cmdh1 as Cmdh6;
+pub use Cmdh1 as Cmdh7;
+pub use Cmdl1 as Cmdl2;
+pub use Cmdl1 as Cmdl3;
+pub use Cmdl1 as Cmdl4;
+pub use Cmdl1 as Cmdl5;
+pub use Cmdl1 as Cmdl6;
+pub use Cmdl1 as Cmdl7;
 #[doc = "CV (rw) register accessor: Compare Value Register\n\nYou can [`read`](crate::Reg::read) this register and get [`cv::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`cv::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@cv`] module"]
 #[doc(alias = "CV")]
 pub type Cv = crate::Reg<cv::CvSpec>;

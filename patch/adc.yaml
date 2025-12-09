@@ -1,3 +1,10 @@
+ADC0:
+  _modify:
+    CMDL[2-7]:
+      derivedFrom: CMDL1
+    CMDH[2-7]:
+      derivedFrom: CMDH1
+
 _add:
   ADC2:
     derivedFrom: ADC0
