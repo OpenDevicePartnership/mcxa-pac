@@ -774,6 +774,15 @@ impl core::fmt::Debug for Lpi2c3 {
 }
 #[doc = "Low-Power Inter-Integrated Circuit"]
 pub use self::lpi2c0 as lpi2c3;
+#[doc = "LPUART"]
+pub type Lpuart5 = crate::Periph<lpuart0::RegisterBlock, 0x400d_a000>;
+impl core::fmt::Debug for Lpuart5 {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("Lpuart5").finish()
+    }
+}
+#[doc = "LPUART"]
+pub use self::lpuart0 as lpuart5;
 #[doc = "Low-Power Serial Peripheral Interface"]
 pub type Lpspi0 = crate::Periph<lpspi0::RegisterBlock, 0x4009_c000>;
 impl core::fmt::Debug for Lpspi0 {
@@ -1080,6 +1089,24 @@ impl core::fmt::Debug for Rtc0 {
 }
 #[doc = "RTC"]
 pub mod rtc0;
+#[doc = "ADC"]
+pub type Adc2 = crate::Periph<adc0::RegisterBlock, 0x400f_0000>;
+impl core::fmt::Debug for Adc2 {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("Adc2").finish()
+    }
+}
+#[doc = "ADC"]
+pub use self::adc0 as adc2;
+#[doc = "ADC"]
+pub type Adc3 = crate::Periph<adc0::RegisterBlock, 0x400f_1000>;
+impl core::fmt::Debug for Adc3 {
+    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
+        f.debug_struct("Adc3").finish()
+    }
+}
+#[doc = "ADC"]
+pub use self::adc0 as adc3;
 #[doc = "CDOG"]
 pub type Cdog0 = crate::Periph<cdog0::RegisterBlock, 0x4010_0000>;
 impl core::fmt::Debug for Cdog0 {
@@ -1179,33 +1206,6 @@ impl core::fmt::Debug for Sau {
 }
 #[doc = "Security Attribution Unit"]
 pub mod sau;
-#[doc = "ADC"]
-pub type Adc2 = crate::Periph<adc0::RegisterBlock, 0x400f_0000>;
-impl core::fmt::Debug for Adc2 {
-    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("Adc2").finish()
-    }
-}
-#[doc = "ADC"]
-pub use self::adc0 as adc2;
-#[doc = "ADC"]
-pub type Adc3 = crate::Periph<adc0::RegisterBlock, 0x400f_1000>;
-impl core::fmt::Debug for Adc3 {
-    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("Adc3").finish()
-    }
-}
-#[doc = "ADC"]
-pub use self::adc0 as adc3;
-#[doc = "LPUART"]
-pub type Lpuart5 = crate::Periph<lpuart0::RegisterBlock, 0x400d_a000>;
-impl core::fmt::Debug for Lpuart5 {
-    fn fmt(&self, f: &mut core::fmt::Formatter) -> core::fmt::Result {
-        f.debug_struct("Lpuart5").finish()
-    }
-}
-#[doc = "LPUART"]
-pub use self::lpuart0 as lpuart5;
 #[no_mangle]
 static mut DEVICE_PERIPHERALS: bool = false;
 #[doc = r" All the peripherals."]
@@ -1279,6 +1279,8 @@ pub struct Peripherals {
     pub lpi2c2: Lpi2c2,
     #[doc = "LPI2C3"]
     pub lpi2c3: Lpi2c3,
+    #[doc = "LPUART5"]
+    pub lpuart5: Lpuart5,
     #[doc = "LPSPI0"]
     pub lpspi0: Lpspi0,
     #[doc = "LPSPI1"]
@@ -1347,6 +1349,10 @@ pub struct Peripherals {
     pub udf0: Udf0,
     #[doc = "RTC0"]
     pub rtc0: Rtc0,
+    #[doc = "ADC2"]
+    pub adc2: Adc2,
+    #[doc = "ADC3"]
+    pub adc3: Adc3,
     #[doc = "CDOG0"]
     pub cdog0: Cdog0,
     #[doc = "CDOG1"]
@@ -1369,12 +1375,6 @@ pub struct Peripherals {
     pub scn_scb: ScnScb,
     #[doc = "SAU"]
     pub sau: Sau,
-    #[doc = "ADC2"]
-    pub adc2: Adc2,
-    #[doc = "ADC3"]
-    pub adc3: Adc3,
-    #[doc = "LPUART5"]
-    pub lpuart5: Lpuart5,
 }
 impl Peripherals {
     #[doc = r" Returns all the peripherals *once*."]
@@ -1431,6 +1431,7 @@ impl Peripherals {
             lpi2c1: Lpi2c1::steal(),
             lpi2c2: Lpi2c2::steal(),
             lpi2c3: Lpi2c3::steal(),
+            lpuart5: Lpuart5::steal(),
             lpspi0: Lpspi0::steal(),
             lpspi1: Lpspi1::steal(),
             lpuart0: Lpuart0::steal(),
@@ -1465,6 +1466,8 @@ impl Peripherals {
             trng0: Trng0::steal(),
             udf0: Udf0::steal(),
             rtc0: Rtc0::steal(),
+            adc2: Adc2::steal(),
+            adc3: Adc3::steal(),
             cdog0: Cdog0::steal(),
             cdog1: Cdog1::steal(),
             dbgmailbox: Dbgmailbox::steal(),
@@ -1476,9 +1479,6 @@ impl Peripherals {
             mau0: Mau0::steal(),
             scn_scb: ScnScb::steal(),
             sau: Sau::steal(),
-            adc2: Adc2::steal(),
-            adc3: Adc3::steal(),
-            lpuart5: Lpuart5::steal(),
         }
     }
 }

@@ -1,30 +1,44 @@
 TRNG0:
+  _delete:
+    - ENT0
+
   _add:
-    ENT1:
-      derivedFrom: ENT0
-      addressOffset: 0x44
+    _registers:
+      ENT0:
+        description: Entropy Read Register
+        addressOffset: 0x40
+        size: 32
+        resetValue: 0
+        resetMask: 0xffffffff
 
-    ENT2:
-      derivedFrom: ENT0
-      addressOffset: 0x48
+      ENT1:
+        derivedFrom: ENT0
+        addressOffset: 0x44
 
-    ENT3:
-      derivedFrom: ENT0
-      addressOffset: 0x4c
+      ENT2:
+        derivedFrom: ENT0
+        addressOffset: 0x48
 
-    ENT4:
-      derivedFrom: ENT0
-      addressOffset: 0x50
+      ENT3:
+        derivedFrom: ENT0
+        addressOffset: 0x4c
 
-    ENT5:
-      derivedFrom: ENT0
-      addressOffset: 0x54
+      ENT4:
+        derivedFrom: ENT0
+        addressOffset: 0x50
 
-    ENT6:
-      derivedFrom: ENT0
-      addressOffset: 0x58
+      ENT5:
+        derivedFrom: ENT0
+        addressOffset: 0x54
 
-    ENT7:
-      derivedFrom: ENT0
-      addressOffset: 0x5c
+      ENT6:
+        derivedFrom: ENT0
+        addressOffset: 0x58
 
+      ENT7:
+        derivedFrom: ENT0
+        addressOffset: 0x5c
+
+  _array:
+    ENT[0-7]:
+      description: Entropy Read Register
