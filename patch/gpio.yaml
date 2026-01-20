@@ -2,6 +2,9 @@ GPIO0:
   PTOR:
     _array:
       PTTO*: {}
+  PSOR:
+    _array:
+      PTSO*: {}
   PCOR:
     _array:
       PTCO*: {}
@@ -14,3 +17,15 @@ GPIO0:
   PIDR:
     _array:
       PID*: {}
+  PDIR:
+    _array:
+      PDI*: {}
+  GICLR:
+    _array:
+      GIWE*: {}
+  GICHR:
+    _array:
+      GIWE*: {}
+  ISFR0:
+    _array:
+      ISF*: {}
