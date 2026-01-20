@@ -1,0 +1,16 @@
+GPIO0:
+  PTOR:
+    _array:
+      PTTO*: {}
+  PCOR:
+    _array:
+      PTCO*: {}
+  PDDR:
+    _array:
+      PDD*: {}
+  PDOR:
+    _array:
+      PDO*: {}
+  PIDR:
+    _array:
+      PID*: {}
