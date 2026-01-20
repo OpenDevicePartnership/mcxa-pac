@@ -670,46 +670,22 @@ pub mod mrcc_ctimer0_clksel;
 pub type MrccCtimer0Clkdiv = crate::Reg<mrcc_ctimer0_clkdiv::MrccCtimer0ClkdivSpec>;
 #[doc = "CTIMER0 clock divider control"]
 pub mod mrcc_ctimer0_clkdiv;
-#[doc = "MRCC_CTIMER1_CLKSEL (rw) register accessor: CTIMER1 clock selection control\n\nYou can [`read`](crate::Reg::read) this register and get [`mrcc_ctimer1_clksel::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`mrcc_ctimer1_clksel::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@mrcc_ctimer1_clksel`] module"]
-#[doc(alias = "MRCC_CTIMER1_CLKSEL")]
-pub type MrccCtimer1Clksel = crate::Reg<mrcc_ctimer1_clksel::MrccCtimer1ClkselSpec>;
-#[doc = "CTIMER1 clock selection control"]
-pub mod mrcc_ctimer1_clksel;
-#[doc = "MRCC_CTIMER1_CLKDIV (rw) register accessor: CTIMER1 clock divider control\n\nYou can [`read`](crate::Reg::read) this register and get [`mrcc_ctimer1_clkdiv::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`mrcc_ctimer1_clkdiv::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@mrcc_ctimer1_clkdiv`] module"]
-#[doc(alias = "MRCC_CTIMER1_CLKDIV")]
-pub type MrccCtimer1Clkdiv = crate::Reg<mrcc_ctimer1_clkdiv::MrccCtimer1ClkdivSpec>;
-#[doc = "CTIMER1 clock divider control"]
-pub mod mrcc_ctimer1_clkdiv;
-#[doc = "MRCC_CTIMER2_CLKSEL (rw) register accessor: CTIMER2 clock selection control\n\nYou can [`read`](crate::Reg::read) this register and get [`mrcc_ctimer2_clksel::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`mrcc_ctimer2_clksel::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@mrcc_ctimer2_clksel`] module"]
-#[doc(alias = "MRCC_CTIMER2_CLKSEL")]
-pub type MrccCtimer2Clksel = crate::Reg<mrcc_ctimer2_clksel::MrccCtimer2ClkselSpec>;
-#[doc = "CTIMER2 clock selection control"]
-pub mod mrcc_ctimer2_clksel;
-#[doc = "MRCC_CTIMER2_CLKDIV (rw) register accessor: CTIMER2 clock divider control\n\nYou can [`read`](crate::Reg::read) this register and get [`mrcc_ctimer2_clkdiv::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`mrcc_ctimer2_clkdiv::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@mrcc_ctimer2_clkdiv`] module"]
-#[doc(alias = "MRCC_CTIMER2_CLKDIV")]
-pub type MrccCtimer2Clkdiv = crate::Reg<mrcc_ctimer2_clkdiv::MrccCtimer2ClkdivSpec>;
-#[doc = "CTIMER2 clock divider control"]
-pub mod mrcc_ctimer2_clkdiv;
-#[doc = "MRCC_CTIMER3_CLKSEL (rw) register accessor: CTIMER3 clock selection control\n\nYou can [`read`](crate::Reg::read) this register and get [`mrcc_ctimer3_clksel::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`mrcc_ctimer3_clksel::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@mrcc_ctimer3_clksel`] module"]
-#[doc(alias = "MRCC_CTIMER3_CLKSEL")]
-pub type MrccCtimer3Clksel = crate::Reg<mrcc_ctimer3_clksel::MrccCtimer3ClkselSpec>;
-#[doc = "CTIMER3 clock selection control"]
-pub mod mrcc_ctimer3_clksel;
-#[doc = "MRCC_CTIMER3_CLKDIV (rw) register accessor: CTIMER3 clock divider control\n\nYou can [`read`](crate::Reg::read) this register and get [`mrcc_ctimer3_clkdiv::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`mrcc_ctimer3_clkdiv::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@mrcc_ctimer3_clkdiv`] module"]
-#[doc(alias = "MRCC_CTIMER3_CLKDIV")]
-pub type MrccCtimer3Clkdiv = crate::Reg<mrcc_ctimer3_clkdiv::MrccCtimer3ClkdivSpec>;
-#[doc = "CTIMER3 clock divider control"]
-pub mod mrcc_ctimer3_clkdiv;
-#[doc = "MRCC_CTIMER4_CLKSEL (rw) register accessor: CTIMER4 clock selection control\n\nYou can [`read`](crate::Reg::read) this register and get [`mrcc_ctimer4_clksel::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`mrcc_ctimer4_clksel::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@mrcc_ctimer4_clksel`] module"]
-#[doc(alias = "MRCC_CTIMER4_CLKSEL")]
-pub type MrccCtimer4Clksel = crate::Reg<mrcc_ctimer4_clksel::MrccCtimer4ClkselSpec>;
-#[doc = "CTIMER4 clock selection control"]
-pub mod mrcc_ctimer4_clksel;
-#[doc = "MRCC_CTIMER4_CLKDIV (rw) register accessor: CTIMER4 clock divider control\n\nYou can [`read`](crate::Reg::read) this register and get [`mrcc_ctimer4_clkdiv::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`mrcc_ctimer4_clkdiv::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@mrcc_ctimer4_clkdiv`] module"]
-#[doc(alias = "MRCC_CTIMER4_CLKDIV")]
-pub type MrccCtimer4Clkdiv = crate::Reg<mrcc_ctimer4_clkdiv::MrccCtimer4ClkdivSpec>;
-#[doc = "CTIMER4 clock divider control"]
-pub mod mrcc_ctimer4_clkdiv;
+pub use mrcc_ctimer0_clkdiv as mrcc_ctimer1_clkdiv;
+pub use mrcc_ctimer0_clkdiv as mrcc_ctimer2_clkdiv;
+pub use mrcc_ctimer0_clkdiv as mrcc_ctimer3_clkdiv;
+pub use mrcc_ctimer0_clkdiv as mrcc_ctimer4_clkdiv;
+pub use mrcc_ctimer0_clksel as mrcc_ctimer1_clksel;
+pub use mrcc_ctimer0_clksel as mrcc_ctimer2_clksel;
+pub use mrcc_ctimer0_clksel as mrcc_ctimer3_clksel;
+pub use mrcc_ctimer0_clksel as mrcc_ctimer4_clksel;
+pub use MrccCtimer0Clkdiv as MrccCtimer1Clkdiv;
+pub use MrccCtimer0Clkdiv as MrccCtimer2Clkdiv;
+pub use MrccCtimer0Clkdiv as MrccCtimer3Clkdiv;
+pub use MrccCtimer0Clkdiv as MrccCtimer4Clkdiv;
+pub use MrccCtimer0Clksel as MrccCtimer1Clksel;
+pub use MrccCtimer0Clksel as MrccCtimer2Clksel;
+pub use MrccCtimer0Clksel as MrccCtimer3Clksel;
+pub use MrccCtimer0Clksel as MrccCtimer4Clksel;
 #[doc = "MRCC_WWDT0_CLKDIV (rw) register accessor: WWDT0 clock divider control\n\nYou can [`read`](crate::Reg::read) this register and get [`mrcc_wwdt0_clkdiv::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`mrcc_wwdt0_clkdiv::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@mrcc_wwdt0_clkdiv`] module"]
 #[doc(alias = "MRCC_WWDT0_CLKDIV")]
 pub type MrccWwdt0Clkdiv = crate::Reg<mrcc_wwdt0_clkdiv::MrccWwdt0ClkdivSpec>;
@@ -829,36 +805,18 @@ pub mod mrcc_cmp0_rr_clksel;
 pub type MrccCmp0RrClkdiv = crate::Reg<mrcc_cmp0_rr_clkdiv::MrccCmp0RrClkdivSpec>;
 #[doc = "CMP0_RR clock divider control"]
 pub mod mrcc_cmp0_rr_clkdiv;
-#[doc = "MRCC_CMP1_FUNC_CLKDIV (rw) register accessor: CMP1_FUNC clock divider control\n\nYou can [`read`](crate::Reg::read) this register and get [`mrcc_cmp1_func_clkdiv::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`mrcc_cmp1_func_clkdiv::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@mrcc_cmp1_func_clkdiv`] module"]
-#[doc(alias = "MRCC_CMP1_FUNC_CLKDIV")]
-pub type MrccCmp1FuncClkdiv = crate::Reg<mrcc_cmp1_func_clkdiv::MrccCmp1FuncClkdivSpec>;
-#[doc = "CMP1_FUNC clock divider control"]
-pub mod mrcc_cmp1_func_clkdiv;
-#[doc = "MRCC_CMP1_RR_CLKSEL (rw) register accessor: CMP1_RR clock selection control\n\nYou can [`read`](crate::Reg::read) this register and get [`mrcc_cmp1_rr_clksel::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`mrcc_cmp1_rr_clksel::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@mrcc_cmp1_rr_clksel`] module"]
-#[doc(alias = "MRCC_CMP1_RR_CLKSEL")]
-pub type MrccCmp1RrClksel = crate::Reg<mrcc_cmp1_rr_clksel::MrccCmp1RrClkselSpec>;
-#[doc = "CMP1_RR clock selection control"]
-pub mod mrcc_cmp1_rr_clksel;
-#[doc = "MRCC_CMP1_RR_CLKDIV (rw) register accessor: CMP1_RR clock divider control\n\nYou can [`read`](crate::Reg::read) this register and get [`mrcc_cmp1_rr_clkdiv::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`mrcc_cmp1_rr_clkdiv::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@mrcc_cmp1_rr_clkdiv`] module"]
-#[doc(alias = "MRCC_CMP1_RR_CLKDIV")]
-pub type MrccCmp1RrClkdiv = crate::Reg<mrcc_cmp1_rr_clkdiv::MrccCmp1RrClkdivSpec>;
-#[doc = "CMP1_RR clock divider control"]
-pub mod mrcc_cmp1_rr_clkdiv;
-#[doc = "MRCC_CMP2_FUNC_CLKDIV (rw) register accessor: CMP2_FUNC clock divider control\n\nYou can [`read`](crate::Reg::read) this register and get [`mrcc_cmp2_func_clkdiv::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`mrcc_cmp2_func_clkdiv::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@mrcc_cmp2_func_clkdiv`] module"]
-#[doc(alias = "MRCC_CMP2_FUNC_CLKDIV")]
-pub type MrccCmp2FuncClkdiv = crate::Reg<mrcc_cmp2_func_clkdiv::MrccCmp2FuncClkdivSpec>;
-#[doc = "CMP2_FUNC clock divider control"]
-pub mod mrcc_cmp2_func_clkdiv;
-#[doc = "MRCC_CMP2_RR_CLKSEL (rw) register accessor: CMP2_RR clock selection control\n\nYou can [`read`](crate::Reg::read) this register and get [`mrcc_cmp2_rr_clksel::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`mrcc_cmp2_rr_clksel::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@mrcc_cmp2_rr_clksel`] module"]
-#[doc(alias = "MRCC_CMP2_RR_CLKSEL")]
-pub type MrccCmp2RrClksel = crate::Reg<mrcc_cmp2_rr_clksel::MrccCmp2RrClkselSpec>;
-#[doc = "CMP2_RR clock selection control"]
-pub mod mrcc_cmp2_rr_clksel;
-#[doc = "MRCC_CMP2_RR_CLKDIV (rw) register accessor: CMP2_RR clock divider control\n\nYou can [`read`](crate::Reg::read) this register and get [`mrcc_cmp2_rr_clkdiv::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`mrcc_cmp2_rr_clkdiv::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@mrcc_cmp2_rr_clkdiv`] module"]
-#[doc(alias = "MRCC_CMP2_RR_CLKDIV")]
-pub type MrccCmp2RrClkdiv = crate::Reg<mrcc_cmp2_rr_clkdiv::MrccCmp2RrClkdivSpec>;
-#[doc = "CMP2_RR clock divider control"]
-pub mod mrcc_cmp2_rr_clkdiv;
+pub use mrcc_cmp0_func_clkdiv as mrcc_cmp1_func_clkdiv;
+pub use mrcc_cmp0_func_clkdiv as mrcc_cmp2_func_clkdiv;
+pub use mrcc_cmp0_rr_clkdiv as mrcc_cmp1_rr_clkdiv;
+pub use mrcc_cmp0_rr_clkdiv as mrcc_cmp2_rr_clkdiv;
+pub use mrcc_cmp0_rr_clksel as mrcc_cmp1_rr_clksel;
+pub use mrcc_cmp0_rr_clksel as mrcc_cmp2_rr_clksel;
+pub use MrccCmp0FuncClkdiv as MrccCmp1FuncClkdiv;
+pub use MrccCmp0FuncClkdiv as MrccCmp2FuncClkdiv;
+pub use MrccCmp0RrClkdiv as MrccCmp1RrClkdiv;
+pub use MrccCmp0RrClkdiv as MrccCmp2RrClkdiv;
+pub use MrccCmp0RrClksel as MrccCmp1RrClksel;
+pub use MrccCmp0RrClksel as MrccCmp2RrClksel;
 #[doc = "MRCC_DAC0_CLKSEL (rw) register accessor: DAC0 clock selection control\n\nYou can [`read`](crate::Reg::read) this register and get [`mrcc_dac0_clksel::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`mrcc_dac0_clksel::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@mrcc_dac0_clksel`] module"]
 #[doc(alias = "MRCC_DAC0_CLKSEL")]
 pub type MrccDac0Clksel = crate::Reg<mrcc_dac0_clksel::MrccDac0ClkselSpec>;
@@ -879,22 +837,16 @@ pub mod mrcc_flexcan0_clksel;
 pub type MrccFlexcan0Clkdiv = crate::Reg<mrcc_flexcan0_clkdiv::MrccFlexcan0ClkdivSpec>;
 #[doc = "FLEXCAN0 clock divider control"]
 pub mod mrcc_flexcan0_clkdiv;
-#[doc = "MRCC_FLEXCAN1_CLKSEL (rw) register accessor: FLEXCAN1 clock selection control\n\nYou can [`read`](crate::Reg::read) this register and get [`mrcc_flexcan1_clksel::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`mrcc_flexcan1_clksel::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@mrcc_flexcan1_clksel`] module"]
-#[doc(alias = "MRCC_FLEXCAN1_CLKSEL")]
-pub type MrccFlexcan1Clksel = crate::Reg<mrcc_flexcan1_clksel::MrccFlexcan1ClkselSpec>;
-#[doc = "FLEXCAN1 clock selection control"]
-pub mod mrcc_flexcan1_clksel;
-#[doc = "MRCC_FLEXCAN1_CLKDIV (rw) register accessor: FLEXCAN1 clock divider control\n\nYou can [`read`](crate::Reg::read) this register and get [`mrcc_flexcan1_clkdiv::R`]. You can [`reset`](crate::Reg::reset), [`write`](crate::Reg::write), [`write_with_zero`](crate::Reg::write_with_zero) this register using [`mrcc_flexcan1_clkdiv::W`]. You can also [`modify`](crate::Reg::modify) this register. See [API](https://docs.rs/svd2rust/#read--modify--write-api).\n\nFor information about available fields see [`mod@mrcc_flexcan1_clkdiv`] module"]
-#[doc(alias = "MRCC_FLEXCAN1_CLKDIV")]
-pub type MrccFlexcan1Clkdiv = crate::Reg<mrcc_flexcan1_clkdiv::MrccFlexcan1ClkdivSpec>;
-#[doc = "FLEXCAN1 clock divider control"]
-pub mod mrcc_flexcan1_clkdiv;
+pub use mrcc_flexcan0_clkdiv as mrcc_flexcan1_clkdiv;
+pub use mrcc_flexcan0_clksel as mrcc_flexcan1_clksel;
 pub use mrcc_lpi2c0_clkdiv as mrcc_lpi2c2_clkdiv;
 pub use mrcc_lpi2c0_clkdiv as mrcc_lpi2c3_clkdiv;
 pub use mrcc_lpi2c0_clksel as mrcc_lpi2c2_clksel;
 pub use mrcc_lpi2c0_clksel as mrcc_lpi2c3_clksel;
 pub use mrcc_lpuart0_clkdiv as mrcc_lpuart5_clkdiv;
 pub use mrcc_lpuart0_clksel as mrcc_lpuart5_clksel;
+pub use MrccFlexcan0Clkdiv as MrccFlexcan1Clkdiv;
+pub use MrccFlexcan0Clksel as MrccFlexcan1Clksel;
 pub use MrccLpi2c0Clkdiv as MrccLpi2c2Clkdiv;
 pub use MrccLpi2c0Clkdiv as MrccLpi2c3Clkdiv;
 pub use MrccLpi2c0Clksel as MrccLpi2c2Clksel;
