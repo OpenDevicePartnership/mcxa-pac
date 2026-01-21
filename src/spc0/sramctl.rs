@@ -7,10 +7,10 @@ pub type W = crate::W<SramctlSpec>;
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 #[repr(u8)]
 pub enum Vsm {
-    #[doc = "1: 1.0 V"]
-    Vsm1 = 1,
-    #[doc = "2: 1.1 V"]
-    Vsm2 = 2,
+    #[doc = "1: SRAM configured for 1.0v"]
+    Sram1v0 = 1,
+    #[doc = "3: SRAM configured for 1.2v"]
+    Sram1v2 = 3,
 }
 impl From<Vsm> for u8 {
     #[inline(always)]
@@ -29,20 +29,20 @@ impl VsmR {
     #[inline(always)]
     pub const fn variant(&self) -> Option<Vsm> {
         match self.bits {
-            1 => Some(Vsm::Vsm1),
-            2 => Some(Vsm::Vsm2),
+            1 => Some(Vsm::Sram1v0),
+            3 => Some(Vsm::Sram1v2),
             _ => None,
         }
     }
-    #[doc = "1.0 V"]
+    #[doc = "SRAM configured for 1.0v"]
     #[inline(always)]
-    pub fn is_vsm1(&self) -> bool {
-        *self == Vsm::Vsm1
+    pub fn is_sram1v0(&self) -> bool {
+        *self == Vsm::Sram1v0
     }
-    #[doc = "1.1 V"]
+    #[doc = "SRAM configured for 1.2v"]
     #[inline(always)]
-    pub fn is_vsm2(&self) -> bool {
-        *self == Vsm::Vsm2
+    pub fn is_sram1v2(&self) -> bool {
+        *self == Vsm::Sram1v2
     }
 }
 #[doc = "Field `VSM` writer - Voltage Select Margin"]
@@ -52,15 +52,15 @@ where
     REG: crate::Writable + crate::RegisterSpec,
     REG::Ux: From<u8>,
 {
-    #[doc = "1.0 V"]
+    #[doc = "SRAM configured for 1.0v"]
     #[inline(always)]
-    pub fn vsm1(self) -> &'a mut crate::W<REG> {
-        self.variant(Vsm::Vsm1)
+    pub fn sram1v0(self) -> &'a mut crate::W<REG> {
+        self.variant(Vsm::Sram1v0)
     }
-    #[doc = "1.1 V"]
+    #[doc = "SRAM configured for 1.2v"]
     #[inline(always)]
-    pub fn vsm2(self) -> &'a mut crate::W<REG> {
-        self.variant(Vsm::Vsm2)
+    pub fn sram1v2(self) -> &'a mut crate::W<REG> {
+        self.variant(Vsm::Sram1v2)
     }
 }
 #[doc = "SRAM Voltage Update Request\n\nValue on reset: 0"]
