@@ -10,4 +10,5 @@ _include:
   - "lpuart.yaml"
   - "mrcc.yaml"
   - "port.yaml"
+  - "spc.yaml"
   - "trng.yaml"

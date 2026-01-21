@@ -1,0 +1,6 @@
+SPC0:
+  SRAMCTL:
+    VSM:
+      _replace_enum:
+        Sram1v0: [1, "SRAM configured for 1.0v"]
+        Sram1v2: [3, "SRAM configured for 1.2v"]
